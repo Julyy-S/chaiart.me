@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirection…</title>
+    <meta http-equiv="refresh" content="0; url=/reves/">
+    <link rel="canonical" href="https://chaiart.me/reves/">
+    <script>
+      (function () {
+        try {
+          var L = localStorage.getItem('lang');
+          if (L === 'en') location.replace('/reves/en/');
+          else location.replace('/reves/');
+        } catch (e) { location.replace('/reves/'); }
+      })();
+    </script>
+  </head>
+  <body>Redirection…</body>
+</html>
