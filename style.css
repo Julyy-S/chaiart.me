@@ -82,27 +82,42 @@ nav a.active::after {
   background: #111;
 }
 
-/* Footer */
 footer {
   position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  font-size: 0.9rem;
-  color: #777;
+  bottom: 0.5rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  font-size: 0.7rem;
+  color: #101010;
 }
 
-.language-switch {
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  font-size: 0.9rem;
-  cursor: pointer;
+.footer-left {
+  text-align: left;
+}
+
+.footer-right {
+  text-align: right;
 }
 
 .language-switch a {
   color: #111;
   text-decoration: none;
   margin: 0 0.25rem;
+}
+
+.language-switch a.active {
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-left {
+    font-size: 0.5rem; /* plus petit sur mobile */
+  }
 }
 
 
@@ -579,6 +594,54 @@ a {
     max-width: 260px;
   }
 }
+
+/* --- Mentions légales --- */
+.legal-main {
+  max-width: 800px;
+  margin: 4rem 0;
+  padding: 0 2rem;
+  line-height: 1.6;
+  font-family: 'Tai Heritage Pro', serif;
+  text-align: left; /* forcer l'alignement à gauche */
+}
+
+.legal-main h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: normal;
+}
+
+.legal-main h3 {
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.legal-main p {
+  margin-bottom: 1rem;
+}
+
+.legal-back {
+  margin-top: 3rem;
+}
+
+.legal-back a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid #111;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #111;
+  font-size: 0.9rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.legal-back a:hover {
+  background: #111;
+  color: #fff;
+}
+
 
 
 
